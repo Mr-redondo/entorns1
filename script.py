@@ -4,15 +4,15 @@ import os
 from datetime import datetime
 
 # Configuration
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")  # Set this as an environment variable
-GITHUB_REPO = "your-username/your-repo"
+GITHUB_TOKEN = os.getenv("")  # Set this as an environment variable
+GITHUB_REPO = "Mr-redondo/randomC"
 
 # Generate dynamic release tag and name based on date/time
 current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 RELEASE_TAG = f"v{current_time}"
 RELEASE_NAME = f"Version {current_time}"
 RELEASE_BODY = "Automated release with timestamp."
-FILE_PATH = "path/to/your/compiled-file.zip"  # Update with your actual file path
+FILE_PATH = "/var/lib/jenkins/workspace/Compile_Random_C/main"  # Update with your actual file path
 
 # GitHub API URL
 GITHUB_API_URL = f"https://api.github.com/repos/{GITHUB_REPO}/releases"
